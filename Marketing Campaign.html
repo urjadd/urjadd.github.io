@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Campaign Analysis | Urja Damodhar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-gray-100 font-sans">
+
+  <section class="py-20 px-6 md:px-16 max-w-5xl mx-auto">
+    <h1 class="text-4xl font-bold text-teal-400 mb-4">Marketing Campaign Analysis</h1>
+    <p class="text-lg text-gray-300 mb-6">A senior-level data science project focused on optimizing marketing outcomes through data engineering, customer segmentation, KPI analysis, and A/B testing.</p>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10 mb-2">🔍 Problem Statement</h2>
+    <p class="mb-6">How can we increase campaign response rates and ROI by understanding customer behavior and tailoring campaign strategies across segments?</p>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">🧠 How I Think Like a Data Scientist</h2>
+    <p class="mb-4 text-gray-300">I don’t just analyze — I interrogate the data with a strategic mindset. This project was not about building a dashboard, it was about surfacing unseen signals that lead to real action.</p>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li><strong>Curiosity-led exploration:</strong> Instead of asking “Who responded?”, I asked “Who responded <em>unexpectedly</em>, and why?”</li>
+      <li><strong>Business-first framing:</strong> I treated data as a decision-making tool, not a reporting mechanism.</li>
+      <li><strong>Modeling for impact:</strong> I applied statistical testing not to prove a point, but to reduce uncertainty and risk in marketing decisions.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">🚧 Problems I Faced & How I Tackled Them</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li><strong>Messy income data:</strong> ~1% missing values — resolved using targeted imputation after validating distributions</li>
+      <li><strong>Ambiguous response variables:</strong> Merged multiple binary campaign flags into a consolidated <code>Response</code> metric to analyze performance holistically</li>
+      <li><strong>Outlier bias:</strong> Boxplots showed extreme values in spending — I capped them to preserve general trends while minimizing distortion</li>
+      <li><strong>Too many KPIs, not enough focus:</strong> Created clear metric categories: Acquisition, Engagement, Conversion — and mapped each SQL output accordingly</li>
+      <li><strong>Statistical noise in A/B testing:</strong> Validated assumptions with t-tests and confidence intervals to prevent false-positive conclusions</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">🛠️ Tools & Technologies</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Python (Pandas, Seaborn, Statsmodels)</li>
+      <li>SQL (KPI logic, segmentation queries)</li>
+      <li>Tableau for dashboarding and storytelling</li>
+      <li>A/B testing (control vs treatment, t-test)</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">⚙️ Project Flow</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Raw data cleaning (null imputation, dtype checks, outlier treatment)</li>
+      <li>Feature engineering (RFM variables, total spend, recency)</li>
+      <li>Campaign KPI extraction using SQL</li>
+      <li>Segmentation with RFM, campaign response clustering</li>
+      <li>A/B testing to validate uplift and conversion gains</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">📊 Key Insights</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Catalog campaigns had the highest response rate (7.4%)</li>
+      <li>Overall campaign conversion: <strong>44.89%</strong>, with latest campaign at <strong>15.05%</strong></li>
+      <li>RFM segmentation showed stale customers responded better than expected</li>
+      <li>Top segments: Big Spenders and Champions</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-4">📈 Dashboard Preview</h2>
+    <img src="assests\images\Dashboard 1.png" alt="Customer Behavior Dashboard" class="rounded-lg shadow-lg mb-10"/>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">📦 Files and Deliverables</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Python Notebooks: Data cleaning, KPI extraction, A/B testing</li>
+      <li>SQL Scripts for segmentation and KPIs</li>
+      <li>Tableau dashboard (.twb)</li>
+      <li>ER Diagram and Summary Sheets (boxplots, null values)</li>
+    </ul>
+
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="https://github.com/urjadd/marketing-campaign-analysis" target="_blank" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded">🔗 View on GitHub</a>
+      <a href="https://public.tableau.com/views/CustomerBehaviourvsCampaignResponse/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-2 rounded">📊 View Tableau Dashboard</a>
+    </div>
+
+    <footer class="mt-16 text-sm text-gray-500 border-t border-gray-700 pt-6">
+      &copy; 2025 Urja Damodhar | All rights reserved.
+    </footer>
+  </section>
+
+</body>
+</html>

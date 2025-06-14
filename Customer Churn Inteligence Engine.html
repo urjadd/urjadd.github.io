@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Churn Intelligence | Urja Damodhar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-gray-100 font-sans">
+  <section class="py-20 px-6 md:px-16 max-w-5xl mx-auto">
+    <h1 class="text-4xl font-bold text-teal-400 mb-4">Customer Churn Intelligence Engine (Flagship)</h1>
+    <p class="text-lg text-gray-300 mb-6">A FinTech data engineering and analytics project built on Snowflake, leveraging SQL pipelines, CI/CD workflows, and churn-focused KPIs to support predictive modeling and business intelligence.</p>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10 mb-2">🔍 Problem Statement</h2>
+    <p class="mb-6">How can a digital bank reduce churn by identifying early behavioral signals and automating a scalable, analytics-ready pipeline to support both decision-makers and machine learning workflows?</p>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">🏗️ Project Architecture</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Designed normalized schema in Snowflake (customers, accounts, transactions)</li>
+      <li>Wrote SQL transformations to derive KPIs: tenure, avg balance, transaction gaps</li>
+      <li>Implemented CI/CD using GitHub + SQL script versioning</li>
+      <li>Churn logic based on account inactivity, drop in engagement, and balance volatility</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">🚧 Problems I Faced & How I Solved Them</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li><strong>Complex joins across large Snowflake tables</strong> → Used CTEs, filtered views, and indexed key relationships for performance</li>
+      <li><strong>Schema changes broke downstream SQL logic</strong> → Version-controlled all scripts and implemented incremental tests in CI/CD</li>
+      <li><strong>Churn not explicitly labeled</strong> → Created rule-based churn proxy using gap analysis + LTV decline</li>
+      <li><strong>Manual pipeline execution</strong> → Automated staging and deployment with GitHub Actions</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">🛠️ Tools & Technologies</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Snowflake (warehouse, SQL transformations, secure views)</li>
+      <li>GitHub + CI/CD (versioning + test + deploy)</li>
+      <li>Python (for loading data and validation)</li>
+      <li>Streamlit & Tableau (planned for ML and visualization)</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">⚙️ Project Flow</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Ingested data into Snowflake using Python scripts and SnowSQL</li>
+      <li>Normalized data into dimension and fact tables</li>
+      <li>Built reusable SQL scripts for metrics and KPIs</li>
+      <li>Used GitHub CI/CD to track changes and automate deployments</li>
+      <li>Tagged churn labels for future ML prediction use</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">📊 Key Insights</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>~12% of customers showed early churn risk due to reduced activity and balance drops</li>
+      <li>Transaction gap analysis flagged customers who skipped 2+ billing cycles</li>
+      <li>High-value churners had <strong>average LTV drop of 38%</strong> over 3 months</li>
+      <li>Pipeline supports automated reporting and feature extraction for ML</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-4">📦 Files and Deliverables</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>SQL schema and analytics queries</li>
+      <li>GitHub Actions CI/CD YAML for pipeline automation</li>
+      <li>Python loader scripts for Snowflake ingestion</li>
+      <li>Churn logic notebook + feature exports (for ML)</li>
+    </ul>
+
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="https://github.com/urjadd/churn-snowflake-pipeline" target="_blank" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded">🔗 View on GitHub</a>
+      <a href="#" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-2 rounded">📊 View Streamlit / Tableau (Coming Soon)</a>
+    </div>
+
+    <footer class="mt-16 text-sm text-gray-500 border-t border-gray-700 pt-6">
+      &copy; 2025 Urja Damodhar | All rights reserved.
+    </footer>
+  </section>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Sales Dashboard | Urja Damodhar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-gray-100 font-sans">
+  <section class="py-20 px-6 md:px-16 max-w-5xl mx-auto">
+    <h1 class="text-4xl font-bold text-teal-400 mb-4">E-commerce Sales Dashboard (Flagship)</h1>
+    <p class="text-lg text-gray-300 mb-6">A complete sales analytics case study involving schema design, SQL automation, dashboarding, and segmentation. This project simulates a business intelligence pipeline for a retail company.</p>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10 mb-2">🔍 Problem Statement</h2>
+    <p class="mb-6">How can we enable business stakeholders to monitor product and country-level sales performance, and uncover hidden insights to optimize customer strategies?</p>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">🚧 Problems I Faced & How I Solved Them</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li><strong>Dirty CSVs:</strong> Column mismatches, nulls, data type inconsistencies.<br><strong>Fix:</strong> Cleaned using Pandas, standardized schema with strict dtype enforcement.</li>
+      <li><strong>Manual data loading pain:</strong> Needed fast iterative development.<br><strong>Fix:</strong> Wrote a custom SQL insert generator to convert CSVs into ready-to-run SQL scripts.</li>
+      <li><strong>Multiple disconnected files:</strong> Schema, inserts, queries scattered.<br><strong>Fix:</strong> Modularized code with structured folders and a master Python runner (`main.py`).</li>
+      <li><strong>Low clarity in business output:</strong> Queries were too technical.<br><strong>Fix:</strong> Built a Tableau dashboard with clean KPI summaries and segment-level visualizations.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">🛠️ Tools & Technologies</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Python (Pandas, sqlite3, automation scripts)</li>
+      <li>SQL (Schema design, business analytics)</li>
+      <li>Tableau (.twb workbook, visual storytelling)</li>
+      <li>Jupyter Notebook (data inspection, boxplots)</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">⚙️ Project Flow</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Cleaned and validated raw CSVs in Python</li>
+      <li>Created SQL schema with referential integrity</li>
+      <li>Automated data inserts with custom generator</li>
+      <li>Built 10+ SQL queries to derive key insights</li>
+      <li>Designed Tableau dashboard for business use</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">📊 Key Insights</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>Top 5 products contributed over 50% of total revenue</li>
+      <li>3 countries drove most of the order volume</li>
+      <li>“Medium spenders” segment showed highest repeat rate</li>
+      <li>Identified products never purchased — potential dead stock</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-4">📈 Dashboard Preview</h2>
+    <img src="assests\images\E-Commerce Sales Dashboard.png" alt="Sales Dashboard" class="rounded-lg shadow-lg mb-10"/>
+
+    <h2 class="text-2xl font-semibold text-teal-300 mb-2">📦 Files and Deliverables</h2>
+    <ul class="list-disc list-inside text-gray-300 mb-6">
+      <li>SQL Scripts: `create_tables.sql`, `business_queries.sql`</li>
+      <li>Python: `generate_sql_inserts.py`, `main.py`</li>
+      <li>Jupyter Notebook: `data_cleaning.ipynb`</li>
+      <li>Database: `ecommerce.db`</li>
+      <li>Tableau Workbook: `E-Commerce.twb`</li>
+    </ul>
+
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="https://github.com/urjadd/ecommerce-sales-dashboard" target="_blank" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded">🔗 View on GitHub</a>
+      <a href="https://public.tableau.com/views/ECommerceSalesDashboard/Dashboard1" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-2 rounded">📊 View Tableau Dashboard</a>
+    </div>
+
+    <footer class="mt-16 text-sm text-gray-500 border-t border-gray-700 pt-6">
+      &copy; 2025 Urja Damodhar | All rights reserved.
+    </footer>
+  </section>
+</body>
+</html>
