@@ -7,6 +7,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-gray-100 font-sans leading-relaxed tracking-wide">
+  <!-- Back Button (aligned and styled) -->
+<div class="px-6 md:px-16 max-w-5xl mx-auto pt-10">
+  <a href="index.html#projects" title="Back to Portfolio"
+    class="inline-block p-4 bg-teal-400 rounded-full shadow-lg hover:scale-110 hover:rotate-[-6deg] transition-transform duration-300 ease-in-out">
+    <!-- Home Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10.707 1.293a1 1 0 00-1.414 0l-8 8A1 1 0 002 10h1v7a1 1 0 001 1h4a1 1 0 001-1v-4h2v4a1 1 0 001 1h4a1 1 0 001-1v-7h1a1 1 0 00.707-1.707l-8-8z" />
+    </svg>
+  </a>
+</div>
+
 
   <div class="container mx-auto px-6 py-12">
     <h1 class="text-4xl font-bold text-teal-400 mb-12 text-center">Work Experience</h1>
@@ -15,9 +26,12 @@
     <div class="grid gap-10 md:grid-cols-2">
 
       <!-- Experience Block Template -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:ring-2 hover:ring-teal-400 transition duration-300">
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300
+      hover:ring-2 hover:ring-teal-400 transition duration-300">
         <h3 class="text-xl font-semibold text-teal-400">Data Scientist- Researcher @ GLOB~S Research Lab</h3>
         <div class="text-sm text-gray-400 mb-4">July 2024 – Jan 2025 · Boston, MA · Part-time | Hybrid</div>
+        <p class="text-gray-400 italic mb-3">Led econometrics and data engineering projects to analyze post-crisis innovation and sentiment for academic and corporate stakeholders.</p>
+
         <ul class="list-disc pl-5 space-y-2 text-gray-300">
           <li>Applied <strong>econometric and causal inference techniques</strong> (panel regression, fixed effects, DiD) to uncover post-disaster innovation and sentiment shifts.</li>
           <li>Processed and analyzed over <strong>1M+ media records</strong> using BigQuery, improving marketing strategy performance by <strong>25%</strong> via Looker Studio dashboards.</li>
@@ -27,9 +41,12 @@
         </ul>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:ring-2 hover:ring-teal-400 transition duration-300">
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300
+      hover:ring-2 hover:ring-teal-400 transition duration-300">
         <h3 class="text-xl font-semibold text-teal-400">Machine Learning Research Assistant @ Boston University</h3>
         <div class="text-sm text-gray-400 mb-4">Jan 2024 – Present · Boston, MA</div>
+        <p class="text-gray-400 italic mb-3">Conducted domain-specific ML research in NLP, behavioral science, and symbolic programming under faculty mentorship.</p>
+
         <ul class="list-disc pl-5 space-y-2 text-gray-300">
           <li>Fine-tuned a domain-specific <strong>large language model (LLM)</strong> based on transformer architecture for Morse Code decoding; customized tokenization, gated embeddings, and positional encoding to improve sequence retention and accuracy.</li>
           <li>Conducted a 10-week ML-driven behavioral experiment with 215 participants to assess auditory recall; analyzed 20,000+ responses and achieved a <strong>27% accuracy improvement</strong> using statistical models including T-tests and regression.</li>
@@ -40,23 +57,13 @@
         </ul>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:ring-2 hover:ring-teal-400 transition duration-300">
-        <h3 class="text-xl font-semibold text-teal-400">Marketing Data Analyst @ Brandstormers Media</h3>
-        <div class="text-sm text-gray-400 mb-4">Sept 2023 – Dec 2023 · Remote · Part-time</div>
-        <ul class="list-disc pl-5 space-y-2 text-gray-300">
-          <li>Worked on digital marketing analytics for a <strong>B2C e-commerce cosmetics brand</strong>, applying data science techniques to optimize engagement across personalized campaigns.</li>
-          <li>Improved click-through rates by <strong>10%</strong> through A/B testing and T-test analysis on promotional content variants.</li>
-          <li>Built dynamic <strong>Tableau dashboards</strong> to monitor campaign performance metrics like CTR, open rates, and conversions in real time.</li>
-          <li>Raised response rates by <strong>6%</strong> using customer segmentation with <strong>K-means clustering</strong> for personalized content delivery.</li>
-          <li>Boosted email open rates by <strong>10%</strong> through send-time optimization using <strong>time-series forecasting</strong>.</li>
-          <li>Enhanced personalization with <strong>LSTM-based sentiment modeling</strong> and word embeddings, improving customer satisfaction by <strong>7%</strong>.</li>
-          <li>Collaborated with marketing teams using <strong>CRM platforms</strong> to support automation, targeting, and content lifecycle workflows.</li>
-        </ul>
-      </div>
 
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:ring-2 hover:ring-teal-400 transition duration-300">
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300
+      hover:ring-2 hover:ring-teal-400 transition duration-300">
         <h3 class="text-xl font-semibold text-teal-400">Computer Science Educator @ WhiteHat Jr</h3>
         <div class="text-sm text-gray-400 mb-4">Aug 2020 – Aug 2021 · Pune, India · Part-time</div>
+        <p class="text-gray-400 italic mb-3">Delivered personalized, project-based technical education in coding and data science to international K–12 students.</p>
+
         <ul class="list-disc pl-5 space-y-2 text-gray-300">
           <li>Delivered customized instruction across multiple technical courses—including <strong>web development, data science, programming</strong>, and <strong>machine learning</strong>—to international students.</li>
           <li>Conducted over <strong>1,200 classes</strong> for <strong>35+ students</strong> from the U.S., UK, Canada, UAE, and Singapore, maintaining a consistent <strong>4.9/5 instructor rating</strong>.</li>
@@ -66,9 +73,15 @@
         </ul>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:ring-2 hover:ring-teal-400 transition duration-300">
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300
+      transform hover:scale-105 transition-transform duration-300
+hover:ring-2 hover:ring-teal-400 transition duration-300">
         <h3 class="text-xl font-semibold text-teal-400">Data Science Intern @ Flip Robo Technologies LLC</h3>
         <div class="text-sm text-gray-400 mb-4">Apr 2021 – Oct 2021 · Remote · Internship</div>
+        <p class="text-gray-400 italic mb-3">Developed full-stack components for a portfolio platform using Vue, Node.js, and MongoDB in an agile product environment.</p>
+
+        <p class="text-gray-400 italic mb-3">Built predictive models and engineered clean financial datasets to support credit risk assessment for a micro-lending firm.</p>
+
         <ul class="list-disc pl-5 space-y-2 text-gray-300">
           <li>Collaborated with a <strong>micro-loan company</strong> to analyze financial datasets and build predictive models for credit risk and loan repayment behavior.</li>
           <li>Developed <strong>classification and regression models</strong> to forecast loan approval and default likelihood based on customer and transaction data.</li>
@@ -78,9 +91,12 @@
         </ul>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:ring-2 hover:ring-teal-400 transition duration-300">
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300
+      hover:ring-2 hover:ring-teal-400 transition duration-300">
         <h3 class="text-xl font-semibold text-teal-400">Full Stack Developer Intern @ 47 Creations</h3>
         <div class="text-sm text-gray-400 mb-4">Jan 2021 – Mar 2021 · Remote · Internship</div>
+        <p class="text-gray-400 italic mb-3">Developed full-stack components for a portfolio platform using Vue, Node.js, and MongoDB in an agile product environment.</p>
+
         <ul class="list-disc pl-5 space-y-2 text-gray-300">
           <li>Helped develop a LinkedIn-style platform for <strong>graphic designers</strong>, contributing to both front-end and back-end functionality.</li>
           <li>Built interactive UI components using <strong>Vue.js</strong> for user profiles, portfolios, and community interactions.</li>
