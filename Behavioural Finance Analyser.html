@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Behavioural Finance Analyser | Urja Damodhar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-gray-100 font-sans">
+
+  <!-- Back Button -->
+  <div class="px-6 md:px-16 max-w-5xl mx-auto pt-10">
+    <a href="index.html#projects" title="Back to Portfolio"
+      class="inline-block p-4 bg-teal-400 rounded-full shadow-lg hover:scale-110 hover:rotate-[-6deg] transition-transform duration-300 ease-in-out">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10.707 1.293a1 1 0 00-1.414 0l-8 8A1 1 0 002 10h1v7a1 1 0 001 1h4a1 1 0 001-1v-4h2v4a1 1 0 001 1h4a1 1 0 001-1v-7h1a1 1 0 00.707-1.707l-8-8z" />
+      </svg>
+    </a>
+  </div>
+
+  <section class="py-20 px-6 md:px-16 max-w-5xl mx-auto">
+
+    <h1 class="text-4xl font-bold text-teal-400 mb-4">Behavioural Finance Analyser</h1>
+    <p class="text-lg text-gray-300 mb-2">
+      An end-to-end machine learning system that classifies personal spending behavior across 5 categories, deployed as a live REST API with an agentic AI layer for natural language queries.
+    </p>
+
+    <!-- Tags -->
+    <div class="flex gap-3 flex-wrap mb-8 mt-4">
+      <span class="text-xs bg-gray-800 text-teal-300 px-3 py-1 rounded-full">ML</span>
+      <span class="text-xs bg-gray-800 text-teal-300 px-3 py-1 rounded-full">FastAPI</span>
+      <span class="text-xs bg-gray-800 text-teal-300 px-3 py-1 rounded-full">Docker</span>
+      <span class="text-xs bg-gray-800 text-teal-300 px-3 py-1 rounded-full">Cloud Deployment</span>
+      <span class="text-xs bg-gray-800 text-teal-300 px-3 py-1 rounded-full">Agentic AI</span>
+      <span class="text-xs bg-gray-800 text-teal-300 px-3 py-1 rounded-full">XGBoost</span>
+      <span class="text-xs bg-gray-800 text-teal-300 px-3 py-1 rounded-full">Groq LLM</span>
+      <span class="text-xs bg-gray-800 text-teal-300 px-3 py-1 rounded-full">Streamlit</span>
+    </div>
+
+    <!-- Live App Banner -->
+    <div class="bg-gray-900 border border-teal-500 rounded-xl p-5 mb-10 flex items-center justify-between flex-wrap gap-4">
+      <div>
+        <p class="text-teal-400 font-semibold text-sm uppercase tracking-wide">Live App</p>
+        <p class="text-gray-300 text-sm mt-1">Try the live app. Describe a transaction in plain English and get instant categorization with insight.</p>
+      </div>
+      <div class="flex gap-3 flex-wrap">
+        <a href="https://behavioural-finance-analyser.streamlit.app/" target="_blank"
+          class="bg-teal-500 text-black font-semibold px-5 py-2 rounded-full hover:bg-teal-400 transition text-sm">
+          Try Live App →
+        </a>
+        <a href="https://behavioural-finance-analyser.onrender.com/docs" target="_blank"
+          class="bg-gray-700 text-teal-300 font-semibold px-5 py-2 rounded-full hover:bg-gray-600 transition text-sm">
+          API Docs →
+        </a>
+      </div>
+    </div>
+
+    <!-- Business Problem -->
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10">The Business Problem</h2>
+    <p class="text-gray-300 mt-4 leading-relaxed">
+      Personal finance apps struggle to accurately categorize transactions, leading to unreliable spending insights and poor user trust. This project tackles that problem by building a machine learning classifier trained on behavioral transaction data, moving beyond rule-based categorization toward a model that learns spending patterns automatically.
+    </p>
+
+    <!-- Approach -->
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10">Approach and Methodology</h2>
+    <ul class="list-disc ml-6 text-gray-300 mt-4 space-y-2">
+      <li><strong>Exploratory Data Analysis:</strong> Uncovered 3 behavioral spending insights by analyzing patterns across 7 days of the week and 4 time-of-day slices.</li>
+      <li><strong>Feature Engineering:</strong> Engineered temporal features including month, day, day of week, time slice, and weekend flag to capture spending rhythm.</li>
+      <li><strong>Ablation Study:</strong> Evaluated 4 models (XGBoost, Random Forest, Decision Tree, Logistic Regression) across 4 dataset configurations to isolate the best feature and encoding combination.</li>
+      <li><strong>Model Selection:</strong> Selected XGBoost on signed ordinal encoding with 81% single-split accuracy and 74% K-Fold accuracy, prioritizing generalization over overfitting.</li>
+      <li><strong>Cross Validation:</strong> Used StratifiedKFold to ensure reliable evaluation across all 5 spending categories: Food, Household, Other, Salary, and Transportation.</li>
+    </ul>
+
+    <!-- System Architecture -->
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10">System Architecture</h2>
+    <ul class="list-disc ml-6 text-gray-300 mt-4 space-y-2">
+      <li><strong>Model Layer:</strong> XGBoost classifier serialized with joblib, served via a model.py module with clean prediction logic.</li>
+      <li><strong>API Layer:</strong> FastAPI app with a /predict endpoint, Pydantic schema for request validation, and automatic Swagger UI documentation.</li>
+      <li><strong>Containerization:</strong> Dockerized with a pinned requirements.txt for fully reproducible deployments across environments.</li>
+      <li><strong>Cloud Deployment:</strong> Deployed to Render via GitHub, with the Docker container serving live predictions via a public URL.</li>
+      <li><strong>Agentic AI Layer:</strong> Groq LLM acts as the reasoning brain, extracting structured transaction features from plain English input and returning spending category predictions with insights.</li>
+      <li><strong>Frontend:</strong> Streamlit app with a premium dark UI, deployed on Streamlit Community Cloud for public access.</li>
+    </ul>
+
+    <!-- Tools -->
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10">Tools and Technologies</h2>
+    <p class="text-gray-300 mt-2">
+      Python, XGBoost, scikit-learn, FastAPI, Uvicorn, Docker, Render, Groq LLM, Streamlit, pandas, joblib, python-dotenv
+    </p>
+
+    <!-- Key Results -->
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10">Key Results</h2>
+    <ul class="list-disc ml-6 text-gray-300 mt-4 space-y-2">
+      <li>81% classification accuracy across 5 spending categories on single split evaluation.</li>
+      <li>74% K-Fold accuracy confirming model generalization, not overfitting.</li>
+      <li>Sub-second prediction response times on the live deployed API.</li>
+      <li>3 behavioral insights surfaced through EDA informing feature design decisions.</li>
+      <li>Natural language to prediction pipeline working end to end via Groq LLM agent.</li>
+      <li>Live Streamlit frontend deployed publicly for anyone to try.</li>
+    </ul>
+
+    <!-- What I Learned -->
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10">What I Learned</h2>
+    <ul class="list-disc ml-6 text-gray-300 mt-4 space-y-2">
+      <li>How to structure a production ML project from data to deployed API, not just a notebook.</li>
+      <li>The difference between single split and K-Fold accuracy and why it matters for model selection.</li>
+      <li>How to engineer an agentic AI flow where the LLM reasons over inputs and Python controls the execution.</li>
+      <li>Debugging numpy type serialization issues between scikit-learn and FastAPI response models.</li>
+      <li>Deploying a Streamlit frontend to the cloud and managing API secrets securely.</li>
+    </ul>
+
+    <!-- GitHub -->
+    <h2 class="text-2xl font-semibold text-teal-300 mt-10">GitHub</h2>
+    <p class="text-gray-300 mt-2">
+      View the full codebase on <a href="https://github.com/urjadd/behavioural-finance-analyser" class="text-teal-400 underline hover:text-teal-300" target="_blank">GitHub</a>.
+    </p>
+
+  </section>
+
+</body>
+</html>
